@@ -1,6 +1,5 @@
 package scisrc.mobiledev.firstuiassignment
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -25,8 +24,7 @@ class LoginActivity : AppCompatActivity() {
         backToMainBtn = findViewById(R.id.loginBackToMainBtn)
 
         backToMainBtn.setOnClickListener() {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }
