@@ -29,16 +29,15 @@ class RegisterActivity : AppCompatActivity() {
 
         val signUpTextView = findViewById<TextView>(R.id.textView2)
 
-        val text = "Don't have an account? Sign Up"
+        val text = "Already have an account? Login"
 
         val spannable = SpannableString(text)
         val boldSpan = StyleSpan(Typeface.BOLD)
-        spannable.setSpan(boldSpan, text.indexOf("Sign Up"), text.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannable.setSpan(boldSpan, text.indexOf("Login"), text.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         signUpTextView.text = spannable
 
         signUpTextView.setOnClickListener {
-            // Start the LoginActivity when the TextView is clicked
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
